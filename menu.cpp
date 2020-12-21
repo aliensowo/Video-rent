@@ -7,8 +7,8 @@ void Menu(VrentalStruct*Vrental,int &NC,bool &Open){
     int n=0;
     while(1){
         system("cls");
-        cout<<"1. Открыть файл»"<<endl;
-        cout<<"2. Сохранить файл»"<<endl;
+        cout<<"1. Открыть файл"<<endl;
+        cout<<"2. Сохранить файл"<<endl;
         cout<<"3. Создать элемент"<<endl;
         cout<<"4. Удалить элемент"<<endl;
         cout<<"5. Вывести на экран"<<endl;

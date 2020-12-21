@@ -70,30 +70,33 @@ void Add(VrentalStruct*Vrental,int& NC,bool& Open){
     cout<<"\n Ёлемент добавлен.\n"<<endl;
 }
 
-void Delete(VrentalStruct*Vrental,int& NC,bool& Open){
-    if(!Open){
-        cerr << "Error:  ‘айл еще не был открыт!" << endl;
+void Delete(VrentalStruct*Vrental,int& NC, bool& Open){
+    if (!Open){
+        cerr << "Error: ‘айл еще не был открыт" << endl;
         return;
     }
     system("cls");
 
     int DelNom=-1;
-    cout<<"\n”далелние элемента\n¬ведите Id удал€емого елемента:";
-    cin>>DelNom;
-    for(int i=0;i<NC;i++){
-        if(Vrental[i].ID==DelNom){
+    int Delid;
+    cout << "\n”даленние элемента\n¬ведите Id удал€емого элемента: ";
+    cin>>Delid;
+
+    for (int i=0;i<NC;i++){
+        if(Vrental[i].ID==Delid){
             DelNom=i;
             break;
         }
-    }
-    if(DelNom!=-1){
-        for(int i=DelNom;i<NC-1;i++){
-            Vrental[i]=Vrental[i+1];
+        if (DelNom!=-1){
+            for(int i=DelNom;i<NC-1;i++){
+                Vrental[i]=Vrental[i+1];
+            }
+            NC--;
+            cout <<"\nЁлемент удаленю\n" << endl;
+        }else{
+            cout << "\nЁлемент с заданным ID не найденю\n" << endl;
         }
-        NC--;
-        cout<<"\nЁлемент удален.\n"<<endl;
-    }else{
-        cout<<"\nЁлемент с заданным ID не найден.\n"<<endl;
+
     }
 }
 
